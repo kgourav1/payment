@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Detection and Sum</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Screenshot to Maths</h1>
+      <input type="file" id="upload" accept="image/*" />
+      <button id="detect">Auto Refill Amounts</button>
+      <button id="sum" class="hidden">Sum Amounts</button>
+      <p id="sumResult" class="hidden">
+        Total Sum: <span id="totalSum">0</span>
+      </p>
+      <p id="loading" class="hidden">Processing image, please wait...</p>
+      <table id="results" class="hidden">
+        <thead>
+          <tr>
+            <th>Amounts</th>
+          </tr>
+        </thead>
+        <tbody id="amounts"></tbody>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
